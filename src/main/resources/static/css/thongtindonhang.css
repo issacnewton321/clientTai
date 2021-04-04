@@ -1,0 +1,219 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.header-main{
+    width: 100%;
+    z-index: 30;
+    position: relative;
+    background-size: cover;
+    background-color: rgb(12, 122, 122);
+}
+.header-main .nav-dark {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.header-main .nav-dark .flex-left{
+    float: left;
+    margin-left: 150px;
+    margin-top: 5px;
+}
+.header-main .nav-dark .flex-right{
+    margin-top: 20px;
+}
+.header-main .nav-dark .flex-right ul{
+    display: flex;
+}
+.header-main .nav-dark .flex-right ul li{
+    margin-right: 20px;
+}
+.header-main .nav-dark .flex-right ul li a{
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    
+}
+.header-main .nav-dark .flex-right ul .timkiem{
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+.header-main .nav-dark .flex-right ul .timkiem .fas {
+    color: #000;
+}
+.header-main .nav-dark .flex-right ul .timkiem button {
+    border-radius: 5px;
+}
+.header-main .nav-dark .flex-right ul .timkiem input{
+    border-radius: 1px;
+}
+.header-main .nav-dark .flex-right ul li i{
+    font-size: 16px;
+    color: rgba(250, 235, 215, 0.644);
+    
+}
+.header-main .nav-dark .giohang{
+    float: right;
+    margin-right: 150px;
+    margin-top: 35px;
+}
+.header-main .nav-dark .flex-left img{
+    border: 1px solid black;
+    border-radius: 50%;
+}
+.header-main .nav-dark .flex-left span{
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    font-family: monospace;
+}
+.header-main .nav-dark .giohang button{
+   padding: 7px;
+   background: #3d770d;
+   border-radius: 5px;
+   color: white;
+   font-weight: bold;
+   font-size: 14px;
+}
+.header-main .nav-dark .giohang button a{
+    padding: 7px;
+    background: #3d770d;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+ }
+ .container {
+     background: rgb(193, 196, 199);
+ }
+ .container h1 {
+     margin-left: 200px;
+     font-size: 24px;
+     padding-top: 20px;
+ }
+ .container .order {
+    
+     margin-left: 200px;
+     margin-right: 200px;
+     background: white;
+ }
+ .container .order nav ul li {
+    border: 1px solid black;
+    padding: 20px;
+    margin-left: -40px;
+    border-radius: 3px;
+    margin-bottom: 5px;
+ }
+ .container .order nav ul li .order-info{
+     display: flex;
+     justify-content: space-between;
+     background: tan;
+     margin-right: 40px;
+     border-radius: 5px;
+     padding-left: 10px;
+ }
+ .container .order nav ul li .order-info .info-left .donhang{
+    margin-bottom: -10px;
+ }
+  .container .order nav ul li .order-info p span {
+     color: #1a9cb7;
+ }
+ .container .order nav ul li .order-info .huy button{
+    width: 100px;
+    height: 30px;
+    background: rgba(235, 58, 58, 0.795);
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    margin-right: 20px;
+    margin-top: 22px;
+ }
+ .container .order nav ul li .list {
+     display: flex;
+     justify-content: space-between;
+     margin-right: 100px;
+     margin-top: 10px;
+ }
+ .container .order nav ul li .money {
+     color: red;
+     margin-left: 900px;
+     font-size: 18px;
+     font-weight: bold;
+ }
+ .footer {
+    background-color: #0087b7;
+    justify-content: space-between;
+    display: flex;
+    color: cornsilk;
+    border-top: 1px solid black;
+}
+.footer .block_widget_1{
+    margin-left: 30px;
+}
+.footer .block_widget_1 img {
+    border-radius: 50%;
+}
+.footer .block_widget_1 p {
+    font-size: 18px;
+    font-weight: bold;
+}
+.footer .block_widget_1 .icon {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.footer .block_widget_1 .icon i {
+    margin-left: 5px;
+}
+.footer .ke{
+    width: 100px;
+    height: 2px;
+    background: burlywood;
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+.footer .flatsome_recent_posts p{
+   font-size: 18px;
+    font-weight: bold;
+}
+.footer .block_widget_2 {
+    margin-right: 30px;
+}
+.footer .block_widget_2 p {
+   font-size: 18px;
+   font-weight: bold;
+}
+.footer .block_widget_2 input {
+    width: 300px;
+    height: 25px;
+    border-radius: 10px;
+    background: rgba(255, 235, 205, 0.534);
+    color: white;
+    margin-bottom: 10px;
+}
+.footer .block_widget_2 button {
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    background: #00635b;
+}
+.absolute{
+    background: rgb(43, 42, 42);
+    text-align: center;
+    margin-top: -30px;
+    color:gainsboro;
+}
+.absolute h1 {
+    font-size: 18px;
+}
+.absolute p {
+    font-size: 12px;
+    margin-bottom: 5px;
+    margin-top: -10px;
+}

@@ -1,0 +1,303 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.header-main{
+    width: 100%;
+    z-index: 30;
+    position: relative;
+    background-size: cover;
+    background-color: rgb(12, 122, 122);
+}
+.header-main .nav-dark {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.header-main .nav-dark .flex-left{
+    float: left;
+    margin-left: 150px;
+    margin-top: 5px;
+}
+.header-main .nav-dark .flex-right{
+    margin-top: 20px;
+}
+.header-main .nav-dark .flex-right ul{
+    display: flex;
+}
+.header-main .nav-dark .flex-right ul li{
+    margin-right: 20px;
+}
+.header-main .nav-dark .flex-right ul li a{
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    
+}
+.header-main .nav-dark .flex-right ul .timkiem{
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+.header-main .nav-dark .flex-right ul .timkiem .fas {
+    color: #000;
+}
+.header-main .nav-dark .flex-right ul .timkiem button {
+    border-radius: 5px;
+}
+.header-main .nav-dark .flex-right ul .timkiem input{
+    border-radius: 1px;
+}
+.header-main .nav-dark .flex-right ul li i{
+    font-size: 16px;
+    color: rgba(250, 235, 215, 0.644);
+    
+}
+.header-main .nav-dark .giohang{
+    float: right;
+    margin-right: 150px;
+    margin-top: 35px;
+}
+.header-main .nav-dark .flex-left img{
+    border: 1px solid black;
+    border-radius: 50%;
+}
+.header-main .nav-dark .flex-left span{
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    font-family: monospace;
+}
+.header-main .nav-dark .giohang button{
+   padding: 7px;
+   background: #3d770d;
+   border-radius: 5px;
+   color: white;
+   font-weight: bold;
+   font-size: 14px;
+}
+.header-main .nav-dark .giohang button a{
+    padding: 7px;
+    background: #3d770d;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+ }
+ .container {
+     width: 80%;
+     display: flex;
+     margin-top: 30px;
+     padding: 20px 0px;
+     margin-left: 150px;
+    background: cornsilk;
+ }
+.container .product-gallery{
+    text-align: center;
+    justify-content: center;
+   margin: 0px 50px;
+ }
+ .container .product-info h1{
+     font-size: 28px;
+     margin-bottom: 30px;
+ }
+ .container .product-info p{
+     font-size: 22px;
+     margin-top: -15px;
+ }
+ .container .product-info .gia{
+     color: red;
+      margin-bottom: 20px;
+ }
+ .container .product-info h2{
+     font-size: 18px;
+ }
+ .container .product-info .tinhtrang{
+     display: flex;
+     margin-bottom: 10px;
+ }
+ .container .product-info .tinhtrang span{
+     margin-top: 40px;
+     margin-left: 10px;
+     color: red;
+ }
+ .container .product-info .soluong{
+     display: flex;
+     margin-bottom: 30px;
+ }
+ .container .product-info .soluong h2 {
+     margin-right: 20px;
+ }
+ .buttons_added {
+    opacity:1;
+    display:inline-block;
+    display:-ms-inline-flexbox;
+    display:inline-flex;
+    white-space:nowrap;
+    vertical-align:top;
+    margin-top: 13px;
+    width: 200px;
+}
+.is-form {
+    overflow:hidden;
+    position:relative;
+    background-color:#f9f9f9;
+    height:2.4rem;
+    width:1.9rem;
+    padding:0;
+    text-shadow:1px 1px 1px #fff;
+    border:1px solid #ddd;
+}
+.is-form:focus,.input-text:focus {
+    outline:none;
+}
+.is-form.minus {
+    border-radius:4px 0 0 4px;
+}
+.is-form.plus {
+    border-radius:0 4px 4px 0;
+}
+.input-qty {
+    background-color:#fff;
+    height:2.2rem;
+    text-align:center;
+    font-size:1rem;
+    display:inline-block;
+    vertical-align:top;
+    margin:0;
+    border-top:1px solid #ddd;
+    border-bottom:1px solid #ddd;
+    border-left:0;
+    border-right:0;
+    padding:0;
+}
+.input-qty::-webkit-outer-spin-button,.input-qty::-webkit-inner-spin-button {
+    -webkit-appearance:none;
+    margin:0;
+}
+.container .product-info .giohang button {
+    width: 200px;
+    height: 40px;
+    background: red;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+.container .product-info .chinhsach{
+    margin-top: 40px;
+    border-top: 1px solid tan;
+    display: flex;
+}
+.container .product-info .chinhsach span {
+    width: 150px;
+    margin-top: 10px;
+    margin-right: 40px;
+    font-size: 18px;
+    color: darkgreen;
+}
+ .mota{
+     margin-top: 10px;
+    display: flex;
+    margin-left: 150px;
+    background: cornsilk;
+    margin-right: 150px;
+}
+.mota h1 {
+    font-size: 20px;
+    margin-right: 3px;
+    margin-left: 50px;
+}
+.danhgia{
+    padding-top: 5px;
+    margin-top: 10px;
+   margin-left: 150px;
+   background: cornsilk;
+   margin-right: 150px;
+   margin-bottom: 30px;
+}
+.danhgia h1 {
+    margin-top: 10px;
+    font-size: 20px;
+    margin-right: 3px;
+    margin-left: 50px;
+}
+.danhgia textarea {
+    margin-left: 50px;
+    margin-bottom: 10px;
+}
+.footer {
+    background-color: #0087b7;
+    justify-content: space-between;
+    display: flex;
+    color: cornsilk;
+    border-top: 1px solid black;
+}
+.footer .block_widget_1{
+    margin-left: 30px;
+}
+.footer .block_widget_1 img {
+    border-radius: 50%;
+}
+.footer .block_widget_1 p {
+    font-size: 18px;
+    font-weight: bold;
+}
+.footer .block_widget_1 .icon {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.footer .block_widget_1 .icon i {
+    margin-left: 5px;
+}
+.footer .ke{
+    width: 100px;
+    height: 2px;
+    background: burlywood;
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+.footer .flatsome_recent_posts p{
+   font-size: 18px;
+    font-weight: bold;
+}
+.footer .block_widget_2 {
+    margin-right: 30px;
+}
+.footer .block_widget_2 p {
+   font-size: 18px;
+   font-weight: bold;
+}
+.footer .block_widget_2 input {
+    width: 300px;
+    height: 25px;
+    border-radius: 10px;
+    background: rgba(255, 235, 205, 0.534);
+    color: white;
+    margin-bottom: 10px;
+}
+.footer .block_widget_2 button {
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    background: #00635b;
+}
+.absolute{
+    background: rgb(43, 42, 42);
+    text-align: center;
+    margin-top: -30px;
+    color:gainsboro;
+}
+.absolute h1 {
+    font-size: 18px;
+}
+.absolute p {
+    font-size: 12px;
+    margin-bottom: 5px;
+    margin-top: -10px;
+}

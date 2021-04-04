@@ -1,0 +1,312 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    font-size: 11px;
+    color: #333;
+}
+li {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    background: #2e5e79;
+
+}
+.tieude {
+    padding: 2px 0px;
+    width: 99%;
+    height: 80px;
+    text-align: center;
+    background: #2e5e79;
+    position: relative;
+}
+.thuonghieu{
+    width: 96%;
+    height: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    background-color: #054e79;
+}
+.thuonghieu nav {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.logo{
+    display: flex;
+    color: blanchedalmond;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+.logo img {
+    border: 1px solid black;
+    border-radius: 50%;
+    margin-top: -3px;
+}
+.admin {
+    float: right;
+    margin-right: 130px !important;
+    margin-top: 20px;
+    display: flex;
+    color: blanchedalmond;
+    text-align: center;
+}
+.admin li{
+    margin-left: 5px;
+    font-size: 16px;
+}
+.admin .cot{
+    width: 1px;
+    height: 16px;
+    background: cornsilk;
+}
+.admin a{
+    color: cornsilk;
+}
+.admin li img {
+    margin-top: -10px;
+}
+.show{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.danhmuc{
+   
+    margin-left: 30px;
+    width: 170px;
+    height: 100%;
+    background: white;
+    justify-content: center;
+}
+.danhmuc li {
+    margin-left: -40px;
+    width: 170px;
+    height: 40px;
+    margin-bottom: 15px;
+    text-align: center;
+    border: 0px;
+    border-bottom: 1px solid tan;
+}
+.danhmuc li a{
+    margin-top: 25px;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+}
+.danhmuc h1{
+    width: 170px;
+    margin-left: -40px;
+    margin-top: -11px;
+    height: 30px;
+    border-bottom: 1px solid black;
+    padding: 5px 0px;
+    text-align: center;
+    color: #1B548D;
+    background: wheat;
+}
+.listsp{
+    float: right;
+    margin-right: 40px;
+    padding-bottom: 20px;
+}
+.listsp table {
+    width: 1200px;
+    background: white;
+    border-radius: 2px;
+    border: 1px solid black;
+    font-size: 16px;
+    margin-top: -15px;
+}
+.listsp table th {
+    width: 130px;
+    border-bottom: black;
+}
+.listsp table tr {
+    background: gainsboro;
+}
+.listsp table td {
+    text-align: center;
+    font-size: 16px;
+    font-weight: normal;
+    width: 100px;
+}
+.listsp table tr:hover {
+    background: rgba(150, 150, 117, 0.767);
+}
+.listsp .them {
+    color: white;
+    background: #E6F0F3;
+    color: #1B548D;
+    padding: 5px;
+    border: 1px solid black;
+    border-top-left-radius: 3px ;
+    border-top-right-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.listsp .them button {
+    height: 100%;
+    margin-top: 7px;
+    font-size: 18px;
+    font-weight: bolder;
+    margin-right: 10px;
+    color: red;
+    font-family: inherit;
+}
+.listsp table tr td button{
+    font-size: 13px;
+    font-weight: normal;
+    color: red;
+}
+.listsp table tr td i:hover {
+    color: chartreuse;
+}
+.insert {
+    margin-left: 400px;
+    color: red;
+    display: block;
+    font-size: 18px;
+    width: 1000px;
+    background: gainsboro;
+}
+.insert form .input {
+    display: flex;
+    text-align: center;
+    margin-left: 100px;
+}
+.insert form .input input {
+    margin-left: 20px;
+    height:25px;
+    margin-top: 10px;
+    width: 500px;
+}
+
+.insert form .madanhmuc {
+    display: flex;
+    margin-left: 100px;
+    margin-top: 10px;
+}
+.insert form .madanhmuc p {
+    margin-top: -10px;
+} 
+.insert form .madanhmuc .danhmuccha{
+  width: 300px;
+  margin-left: 20px;
+}
+.insert form .madanhmuc .danhmuccon{
+  width: 300px;
+}
+.insert form .madanhmuc .danhmuccha .content {
+    display: block;
+}
+.insert form .madanhmuc .danhmuccha:hover .content{
+    display: block;
+    margin-top: 10px;
+}
+.insert form .madanhmuc .danhmuccon .content {
+    display: block;
+    
+}
+.insert form .madanhmuc .danhmuccon:hover .content{
+    display: block;
+    margin-top: 10px;
+}
+.model {
+    margin-right: 58px;
+}
+.thsp {
+    margin-right: 10px;
+}
+.xuatxu {
+    margin-right: 45px;
+}
+.mausac {
+    margin-right: 45px;
+}
+.kichthuoc {
+    margin-right: 20px;
+}
+.trongluong {
+    margin-right: 10px;
+}
+.chatlieu {
+    margin-right: 35px;
+}
+.soluong {
+    margin-right: 35px;
+}
+.mota {
+    margin-right: 80px;
+}
+.baohanh {
+    margin-right: 35px;
+}
+.hinhanh {
+    margin-right: 35px;
+}
+.update {
+    margin-left: 400px;
+    color: red;
+    display: block;
+    font-size: 18px;
+    width: 1000px;
+    background: gainsboro;
+}
+.update form .input {
+    display: flex;
+    text-align: center;
+    margin-left: 100px;
+}
+.update form .input input {
+    margin-left: 20px;
+    height:25px;
+    margin-top: 10px;
+    width: 500px;
+}
+
+.update form .madanhmuc {
+    display: flex;
+    margin-left: 100px;
+    margin-top: 10px;
+}
+.update form .madanhmuc p {
+    margin-top: -10px;
+} 
+.update form .madanhmuc .danhmuccha{
+  width: 300px;
+  margin-left: 20px;
+}
+.update form .madanhmuc .danhmuccon{
+  width: 300px;
+}
+.update form .madanhmuc .danhmuccha .content {
+    display: block;
+}
+.update form .madanhmuc .danhmuccha:hover .content{
+    display: block;
+    margin-top: 10px;
+}
+.update form .madanhmuc .danhmuccon .content {
+    display: block;
+    
+}
+.update form .madanhmuc .danhmuccon:hover .content{
+    display: block;
+    margin-top: 10px;
+}
+h5 {
+    padding-top: 20px;
+    text-align: center;
+    font-size: 26px;
+    font-family: serif;
+    font-weight: bold;
+}

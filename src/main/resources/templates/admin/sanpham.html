@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/sanpham.css">
+    <link rel="stylesheet" href="./fontawesome-free-5.12.1-web/css/all.css">  
+     <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="tieude">
+            <div class="thuonghieu">
+                <nav>
+                    <ul>
+                        <li class="logo"> 
+                            <img src="/img/logo-the-thao(10).jpg" width="50px" height="50px" alt="">
+                            <h1>T&T</h1>
+                        </li>
+                    </ul>
+                    <ul class="admin">
+                        <li><img src="/img/Admin-icon.png" width="30px" height="30px" alt=""></li>
+                        <li>Hello Admin</li>
+                        <li><div class="cot"></div></li>
+                        <li><a href="dangnhap.html">Logout</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="show">
+            <div class="danhmuc">
+                <nav> 
+                    <ul>
+                        <h1>Danh Mục</h1>
+                        <li><a href="sanpham.html">Sản Phẩm</a> </li>
+                        <li><a href="khachhang.html">Khách Hàng</a> </li>
+                        <li><a href="donhang.html">Đơn Hàng</a> </li>
+                        <li><a href="thongkedoanhthu.html">Thống Kê</a> </li>
+                        <li><a href="duyetdonhang.html">Đơn Hàng Mới</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="listsp">
+                <div class="them">
+                <h1>Danh Sách Sản Phẩm</h1>
+                <button id="btninsert"><a th:href="@{/nhanvien/insertSanpham}">Insert <i class="fas fa-file-signature"></i></a> </button>
+                </div>
+                <!-- <div th:text="${message}"></div> -->
+                <table>
+                    <tr>
+                        <th>Mã Sản Phẩm</th>
+                        <th>Tên Sản Phẩm</th>
+                        <th>Mã Danh Mục</th>
+                        <th>Giá</th>
+                        <th>Model</th>
+                        <th>Thương Hiệu</th>
+                        <th>Xuất Xứ</th>
+                        <th>Màu Sắc</th>
+                        <th>Số Lượng</th>
+                        <th>Mô Tả</th>
+                        <th>Hình Ảnh</th>
+                        <th>Delete</th>
+                        <th>Update</th>
+                    </tr>
+                   	<tr th:each="sp:${listSP}">
+                   		<td th:utext=${sp.masp}></td>
+                   		<td th:utext=${sp.tensp}></td>
+                   		<td th:utext=${sp.madm}></td>
+                   		<td th:utext=${sp.gia}></td>
+                   		<td th:utext=${sp.model}></td>
+                   		<td th:utext=${sp.thuonghieu}></td>
+                   		<td th:utext=${sp.xuatxu}></td>
+                   		<td th:utext=${sp.mausac}></td>
+                   		<td th:utext=${sp.soluong}></td>
+                   		<td th:utext=${sp.mota}></td>
+                   		<td>
+                   			<img alt="fd" th:src="@{/img/{id}(id=${sp.photo})}" style="width: 100px;">
+                   		</td>
+                   		<td><a th:href="@{/nhanvien/deleteSP/{masp}(masp=${sp.masp})}">Delete</a></td>
+                   		<td><a th:href="@{/nhanvien/updateSP/{masp}(masp=${sp.masp})}">Update</a></td>
+                   	</tr>
+
+                </table>
+            </div>
+            
+        </div>
+        <div class="insert"   th:if="${sanpham}" style="background-color: white;">
+            <h5>Insert Sản Phẩm</h5>
+            <form th:action="@{/nhanvien/sanpham}" method="post" th:object="${sanpham}" enctype="multipart/form-data">
+                <div class="input">
+                <p>Tên Sản Phẩm</p>
+                <input type="text"  placeholder="Tên Sản Phẩm" th:field="*{tensp}">
+                </div>
+                
+               <div class="input">
+                <p>Danh muc</p>
+                <input type="number"  placeholder="Mã danh mục" th:field="*{madm}">
+                </div>
+                <div class="input">
+                    <p>Giá Sản Phẩm</p>
+                    <input type="text"  placeholder="Giá Sản Phẩm" th:field="*{gia}">
+                </div>
+                <div class="input">
+                        <p class="model">Model</p>
+                        <input type="text"  placeholder="Model" th:field="*{model}">
+                </div>
+                <div class="input">
+                    <p class="thsp">Thương Hiệu</p>
+                    <input type="text"  placeholder="Thương Hiệu" th:field="*{thuonghieu}">
+                 </div>
+                
+                <div class="input">
+                    <p class="xuatxu">Xuất Xứ</p>
+                    <input type="text"  placeholder="Xuất Xứ" th:field="*{xuatxu}">
+                </div>
+                <div class="input">
+                    <p class="mausac">Màu Sắc</p>
+                    <input type="text"  placeholder="Màu Sắc" th:field="*{mausac}">
+                </div>
+                <div class="input">
+                    <p class="kichthuoc">Kích Thước</p>
+                    <input type="number"  placeholder="Kích Thước" th:field="*{kichthuoc}">
+                </div>
+                <div class="input">
+                    <p class="soluong">Số Lượng</p>
+                    <input type="number"  placeholder="Số Lượng" th:field="*{soluong}">
+                </div>
+                <div class="input">
+                    <p class="mota">Mô Tả</p>
+                    <textarea cols="65" rows="5"  th:field="*{mota}"></textarea >
+                   <!--  <input type="text" name="mota" placeholder="Mo ta"> -->
+                </div>
+                
+                <div class="input">
+                    <p class="hinhanh">Hình Ảnh</p>
+                    <input type="file" name="hinhanh" placeholder="Hình Ảnh">
+                </div>
+                <button style="margin-left: 400px; font-size: 20px; margin-bottom: 20px; background: green; color: white; border-radius: 2px;">Insert</button>
+            </form>
+            </div>
+        </div>
+        <div class="insert"   th:if="${spUpdate}" style="background-color: white;">
+            <h5>Update Sản Phẩm</h5>
+            <form th:action="@{/nhanvien/updateSP/{masp}(masp=${spUpdate.masp})}" method="post" th:object="${spUpdate}" enctype="multipart/form-data">
+                <div class="input">
+                <p>Tên Sản Phẩm</p>
+                <input type="text"  placeholder="Tên Sản Phẩm" th:field="*{tensp}">
+                </div>
+                
+               <div class="input">
+                <p>Danh muc</p>
+                <input type="number"  placeholder="Mã danh mục" th:field="*{madm}">
+                </div>
+                <div class="input">
+                    <p>Giá Sản Phẩm</p>
+                    <input type="text"  placeholder="Giá Sản Phẩm" th:field="*{gia}">
+                </div>
+                <div class="input">
+                        <p class="model">Model</p>
+                        <input type="text"  placeholder="Model" th:field="*{model}">
+                </div>
+                <div class="input">
+                    <p class="thsp">Thương Hiệu</p>
+                    <input type="text"  placeholder="Thương Hiệu" th:field="*{thuonghieu}">
+                 </div>
+                
+                <div class="input">
+                    <p class="xuatxu">Xuất Xứ</p>
+                    <input type="text"  placeholder="Xuất Xứ" th:field="*{xuatxu}">
+                </div>
+                <div class="input">
+                    <p class="mausac">Màu Sắc</p>
+                    <input type="text"  placeholder="Màu Sắc" th:field="*{mausac}">
+                </div>
+                <div class="input">
+                    <p class="kichthuoc">Kích Thước</p>
+                    <input type="number"  placeholder="Kích Thước" th:field="*{kichthuoc}">
+                </div>
+                <div class="input">
+                    <p class="soluong">Số Lượng</p>
+                    <input type="number"  placeholder="Số Lượng" th:field="*{soluong}">
+                </div>
+                <div class="input">
+                    <p class="mota">Mô Tả</p>
+                    <textarea cols="65" rows="5"  th:field="*{mota}"></textarea >
+                   <!--  <input type="text" name="mota" placeholder="Mo ta"> -->
+                </div>
+                
+                <div class="input">
+                    <p class="hinhanh">Hình Ảnh</p>
+                    <input type="file" name="hinhanh" placeholder="Hình Ảnh">
+                </div>
+                <button style="margin-left: 400px; font-size: 20px; margin-bottom: 20px; background: green; color: white; border-radius: 2px;">Update</button>
+            </form>
+            </div>
+        </div>
+        <!-- <div class="update" id="update" >
+            <h5>Update Sản Phẩm</h5>
+            <form action="">
+                
+                <div class="input">
+                <p>Tên Sản Phẩm</p>
+                <input type="text" name="tensp" placeholder="Tên Sản Phẩm">
+                </div>
+                
+                <div class="madanhmuc">
+                    <p>Mã Danh Mục</p>
+                    <div class="danhmuccha">
+                        <span>Danh Mục Cha</span>
+                        <div class="content">
+                        <p>adfasdfa</p>
+                        <p>bsdfsd</p>
+                        </div>
+                    </div>
+                    <div class="danhmuccon">
+                        <span>Danh Mục Con</span>
+                        <div class="content">
+                        <p>a</p>
+                        <p>b</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="input">
+                    <p>Giá Sản Phẩm</p>
+                    <input type="number" name="gia" placeholder="Giá Sản Phẩm">
+                </div>
+                <div class="input">
+                        <p class="model">Model</p>
+                        <input type="text" name="model" placeholder="Model">
+                </div>
+                <div class="input">
+                    <p class="thsp">Thương Hiệu</p>
+                    <input type="text" name="thuonghieu" placeholder="Thương Hiệu">
+                 </div>
+                
+                <div class="input">
+                    <p class="xuatxu">Xuất Xứ</p>
+                    <input type="text" name="xuatxu" placeholder="Xuất Xứ">
+                </div>
+                <div class="input">
+                    <p class="mausac">Màu Sắc</p>
+                    <input type="text" name="mausac" placeholder="Màu Sắc">
+                </div>
+                <div class="input">
+                    <p class="kichthuoc">Kích Thước</p>
+                    <input type="text" name="kichthuoc" placeholder="Kích Thước">
+                </div>
+                <div class="input">
+                    <p class="trongluong">Trọng Lượng</p>
+                    <input type="text" name="trongluong" placeholder="Trọng Lượng">
+                </div>
+                <div class="input">
+                    <p class="chatlieu">Chất Liệu</p>
+                    <input type="text" name="chatlieu" placeholder="Chất Liệu">
+                </div>
+                <div class="input">
+                    <p class="soluong">Số Lượng</p>
+                    <input type="number" name="soluong" placeholder="Số Lượng">
+                </div>
+                <div class="input">
+                    <p class="mota">Mô Tả</p>
+                    <textarea cols="65" rows="5"></textarea>
+                </div>
+                <div class="input">
+                    <p class="baohanh">Bảo Hành</p>
+                    <input type="text" name="baohanh" placeholder="Bảo Hành">
+                </div>
+                <div class="input">
+                    <p class="hinhanh">Hình Ảnh</p>
+                    <input type="file" name="hinhanh" placeholder="Hình Ảnh">
+                </div>
+                <button style="margin-left: 400px; font-size: 20px; margin-bottom: 20px; background: green; color: white; border-radius: 2px;">Update</button>
+            </form>
+        </div>
+    </div> -->
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/dangnhap.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="login">
+        <img src="/img/pngtree-beautiful-admin-roles-glyph-vector-icon-png-image_5267597.jpg" class="avatar">
+            <h1>Login Nhân Viên</h1>
+            <form th:action="@{/nhanvien/login}" method="post" th:object="${nhanvien}">
+                <p>Username</p>
+                <input type="text" name="username" placeholder="Enter Username">
+                <p>Password</p>
+                <input type="password" name="password" placeholder="Enter Password">
+                <input type="submit" name="" value="Login">
+                <a href="">Lost your password?</a><br>
+                <a href="">Don't have an account?</a>
+            </form>
+         
+        </div>
+</body>
+</html>
