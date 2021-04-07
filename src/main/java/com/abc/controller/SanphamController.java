@@ -42,6 +42,7 @@ public class SanphamController {
 		model.addAttribute("listSP", listSP);
 		return "admin/sanpham.html";
 	}
+	
 	@GetMapping("/nhanvien/insertSanpham")
 	public String insertSanpham1(Model model) {
 		model.addAttribute("sanpham",new Sanpham());

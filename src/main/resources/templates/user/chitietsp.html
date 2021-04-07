@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./fontawesome-free-5.12.1-web/css/all.css">
+    <link rel="stylesheet" href="/css/chitietsp.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header-main">
+        <div class="nav-dark">
+            <div class="flex-left">
+               <img src="img/logo-the-thao(10).jpg" width="60px" height="60px" alt=""><br>
+               <span>T&T</span>
+            </div>
+            <div class="flex-right">
+               <nav>
+                   <ul>
+                       <li class="timkiem"><input type="text" placeholder="Tìm Kiếm"><button><i class="fas fa-search"></i></button></li>
+                       <li class="trangchu"><a href="">Trang Chủ</a></li>
+                       <li class="trangchu"><a th:href="@{/}">Trang Chủ</a></li>
+                       <li class="sale"><a href="">Sale Off</a></li>
+                       <li class="lienhe"><a href="">Liên Hệ</a></li>
+                   </ul>
+               </nav>
+            </div>
+            <div class="giohang">
+                 <div th:if="${session.khachhang != null}" th:text="${session.khachhang.hoten}"></div>
+                  <div th:if="${session.khachhang == null}"><button><a th:href="@{/khachhang/login}">Đăng nhập</a></button> </div>
+                 <button><a href="">Giỏ Hàng</a><i class="fas fa-shopping-cart"></i></button>    
+             </div>
+        </div>
+   </div>
+   <div class="container">
+       <div class="product-gallery">
+        <img th:src="@{/img/{id}(id=${sanpham.photo})}" width="500px" height="500px" alt="">
+       </div>
+       <form class="product-info" th:action="@{/addCart/{masp}(masp = ${sanpham.masp})}" method="get">
+            <h1 th:text="${sanpham.tensp}"></h1>
+            <p class="gia" th:text="${sanpham.gia}"></p>
+            <select  id="" style=" text-align: center; width: 110px; height: 20px; font-size: 16px;">
+                <option value="0">Chọn Size</option>
+                <option value="1">Size S</option>
+                <option value="2">Size S</option>
+                <option value="3">Size S</option>
+            </select>
+            <select id=""  style=" text-align: center; width: 110px; height: 20px; font-size: 16px;">
+                <option value="0">Màu Sắc</option>
+                <option value="1">Trăng</option>
+                <option value="2">Đen</option>
+                <option value="3">Đỏ</option>
+            </select>
+            <div class="tinhtrang">
+                <h2>Tình Trạng: </h2>
+                <span th:if="${sanpham.soluong > 0}">Còn hàng</span>
+                <span th:if="${sanpham.soluong <= 0}">Hết hàng</span>
+            </div>
+            <div class="soluong">
+                <h2>Số Lượng: <!-- <span th:text="${sanpham.soluong}"></span> --></h2>
+                <div class="buttons_added">
+                    
+                    <input class="minus is-form" type="button" value="-"/>
+                    <input aria-label="quantity" class="input-qty" max="10" min="1" value="1" name="soluong" type="number" />
+                    <input class="plus is-form" type="button" value="+"/>
+                </div>
+            </div>
+            <div class="giohang">
+                <button type="submit"><i class="fas fa-shopping-cart"></i>Thêm Vào Giỏ Hàng</button>
+                <button>Mua Ngay</button>
+            </div>
+            <div class="chinhsach">
+                <span><i class="fas fa-undo-alt"></i>7 ngày miễn phí trả hàng</span>
+                <span><i class="fas fa-thumbs-up"></i>Hàng chính hãng 100%</span>
+                <span><i class="fas fa-truck-moving"></i>Miễn phí vận chuyển</span>
+            </div>
+       </form>
+      
+   </div>
+   <div class="mota">
+    <h1>Mô Tả Sản Phẩm: </h1>
+    <p th:text="${sanpham.mota}"></p>
+</div>
+    <div class="danhgia">
+        <h1>Câu hỏi về sản phẩm này</h1>
+        <textarea name="" id="" cols="152" rows="5" maxlength="300" placeholder=" Đặt câu hỏi của bạn tại đây "></textarea>
+        
+    </div>
+    <div class="footer">
+        <div class="block_widget_1">
+            
+            <h1 class="tenshop">T&T Shop</h1>
+            <div class="ke"></div>
+            <img src="img/logo-the-thao(10).jpg" width="400px" height="100px" alt="">
+            <p>Hotline: 0979701794</p>
+            <p>Địa chỉ: 97 Man Thiện, Phường Hiệp Phú, TP. Thủ Đức, TP.HCM</p>
+            <p>Giờ Hoạt Động: 8h00 đến 20h00</p>
+            <div class="icon">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-instagram-square"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fas fa-envelope"></i>
+            </div>
+           
+        </div>
+        <div class="flatsome_recent_posts">
+            <h1>Tin Tức T&T</h1>
+            <div class="ke"></div>
+            <p>Thông Tin Chăm Sóc Khách Hàng</p>
+            <p>Xu Hướng Thể Thao Hiện Nay</p>
+        </div>
+        <div class="block_widget_2">
+            <h1>Follow ngay T&T</h1>
+            <div class="ke"></div>
+            <p>Nhận Thông Tin Mới Nhất Từ T&T</p>
+            <input type="text" placeholder="Email của bạn!!!"> <br>
+            <button>Đăng Kí</button>
+        </div>
+
+    </div>
+    <div class="absolute">
+        <h1>T&T</h1>
+        <p>Copyright 2021 © DANGTAI</p>
+    </div>
+
+ <script src="https://code.jquery.com/jquery-latest.js"></script>
+   <script type="text/javascript">//<![CDATA[
+    $('input.input-qty').each(function() {
+      var $this = $(this),
+        qty = $this.parent().find('.is-form'),
+        min = Number($this.attr('min')),
+        max = Number($this.attr('max'))
+      if (min == 0) {
+        var d = 0
+      } else d = min
+      $(qty).on('click', function() {
+        if ($(this).hasClass('minus')) {
+          if (d > min) d += -1
+        } else if ($(this).hasClass('plus')) {
+          var x = Number($this.val()) + 1
+          if (x <= max) d += 1
+        }
+        $this.attr('value', d).val(d)
+      })
+    })
+//]]></script>
+
+    
+</body>
+</html>
